@@ -16,7 +16,7 @@ A simple React-based application where users can create, edit, and manage text o
 You can either clone the repository from GitHub or extract the ZIP file of this project.
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/suranjit231/canvas-app-assignments.git
 ```
 ### 2. Open the Project in a Code Editor
     - Open the project folder in your preferred code editor, such as Visual Studio Code.
