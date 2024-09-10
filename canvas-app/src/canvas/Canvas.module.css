@@ -1,0 +1,210 @@
+.canvasContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* border: 1px solid #ccc; */
+  max-width: 600px;
+  height: 100%;
+  padding: 15px 0px 0px 0px;
+  box-shadow: #ccc 0px 1px 4px;
+}
+
+.viewsContainer {
+  width: 100%;
+  
+  max-width: 500px; /* Optional max-width */
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  position: relative;
+  height: calc(100vh - 170px);
+}
+
+.canvas {
+  width: 100%;
+  height: 100%; 
+  
+}
+
+
+.controllerContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  /* border: 1px solid #ccc; */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 100%;
+  justify-content: center;
+  margin-top: auto;
+  position: relative;
+  
+}
+
+.controllerContainer input[type="text"] {
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.controllerContainer input[type="text"]:focus{
+  border: 1px solid #007FFF;
+}
+
+.controllerContainer input[type="number"],
+.controllerContainer select,
+.controllerContainer input[type="color"] {
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.stylesControllerContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 5px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  justify-content: center;
+}
+
+.fontSizeControlDiv,
+.fontStyleControlDiv,
+.fontColorControlDiv {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+}
+
+.fontSizeControlDiv input,
+.fontColorControlDiv input,
+.fontStyleControlDiv select {
+  width: 100%;
+  max-width: 50px;
+  
+}
+
+.addTextBtn{
+  margin: 10px;
+  cursor: pointer;
+  padding: 5px 12px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #ccc;
+  background-color: #007FFF;
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.addTextBtn:hover{
+  background-color: #0000FF;
+  color: #fff;
+}
+
+.addTextBtn:active{
+  transform: scale(1.2);
+}
+
+
+.canvasHeaderContainer{
+  width: 100%;
+  display: flex;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.undoIcons, .redoIcons{
+  font-size: 22px;
+  color: rgb(78, 76, 76);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.undoIcons:hover, .redoIcons:hover{
+  color: rgb(31, 30, 30);
+ 
+}
+
+.undoIcons:active, .redoIcons:active{
+  transform: scale(0.85);
+ 
+}
+
+.textActionsCantainer{
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.deleteIcon { 
+  cursor: pointer;
+  font-size: 20px;
+  color: red;
+  
+  transition: 0.3s ease-in-out;
+
+ }
+
+ .editIcon{
+  cursor: pointer;
+  font-size: 20px;
+  color: #0000FF;
+  
+  transition: 0.3s ease-in-out;
+ }
+
+ .deleteIcon:hover{
+  transform: scale(1.2);
+ }
+
+
+ .responsiveTextInputBox{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -30px;
+  padding: 0px 10px;
+  gap: 5px;
+  justify-content: center;
+ }
+
+ .responsiveTextInputBox input{
+  flex: 1 1;
+ }
+
+ .closeInput{
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+ }
+
+ 
+ @media screen and (max-width: 550px) {
+  .stylesControllerContainer {
+    flex: 1 1;
+    gap: 5px;
+   
+  }
+
+  .addTextBtn{
+    margin:0;
+  }
+ }

@@ -1,0 +1,64 @@
+
+
+let canvas = document.getElementsById("canvas");
+
+let ctx = canvas.getContext("2d");
+
+//----- fill the rectangle with blue color ---------//
+ ctx.fillStyle = "blue";
+
+//---- create a ractangle inside the canvas (X, Y, width, height)
+ ctx.fillRact(50, 50, 400, 200)
+
+
+//--- to give a stroke (border) we used
+
+ctx.strokeStyle="green" //--- apply green color border ------//
+ctx.strokeRact(50, 50, 400, 200);
+
+//====== create a circle in canvas ========//
+ctx.arc(x, y, r, sAngle, yAngle)
+
+ctx.arc(300, 100, 50, 0, 2*Math.PI)
+
+
+
+//======= create a triangle using canvas ===========//
+ctx.moveTo(100, 100);
+ctx.lineTo(100, 300);
+ctx.lineTo(300, 300);
+ctx.lineTo(100, 100);
+ctx.strokeStyle= "cyan";
+ctx.stroke();
+
+
+
+//========= adding text to canvas ===================//
+ctx.font="20px arial";
+
+//---- change the color of the text ----------------//
+ctx.fillStyle = "green";
+
+//---- syntax  ctx.fillText(textName, X-axis, Y-axis);
+ctx.fillText("Hello World", 100, 100)
+
+
+//---- instead of fill the text wants border styles text =======//
+ctx.strokeStyle = "green"
+ctx.strokeText("Hello World", 100, 100);
+
+
+//====== apply gradient color to canvas ===========//
+ctx.createLinearGradient(x1, y1, x2, y2);
+let gradient = ctx.createLinearGradient(100, 100, 300, 100);
+gradient.addColorStop(0, "yellow");
+gradient.addColorStop(1, "red");
+
+ctx.fillStyle = gradient;
+ctx.fillRact(100, 100, 400, 250);
+
+
+//===== apply gradient color to text ==============//
+ctx.font("20px", arial);
+ctx.fillStyle = gradient;
+ctx.fillText("Hello World", 100, 100)
